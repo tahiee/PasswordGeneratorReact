@@ -88,20 +88,21 @@ function App() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className='bg-teal-100'>
-
+        <div className='bg-teal-100 '>
+          <br />
           {/* text area start */}
-          <section className='sm:text-lg sm:pr-20 sm:pl-20 sm:mt-3 mt-3 pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
-            <h1 className=''>Instantly generate a secure, random password with the LastPass online tool</h1>
+          <section className='sm:text-lg sm:pr-20 sm:pl-20 pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
+            <h1>Instantly generate a secure, random password with the LastPass online tool</h1>
           </section>
           {/* text area end */}
 
           {/* password show area start */}
-          <section className='flex text-center items-center justify-center bg-teal-100'>
-            <div className='sm:w-auto w-96' >
-              <h1 className='bg-white shadow-lg h-28 rounded-t-3xl text-4xl mt-4 flex text-center items-center justify-between '>
+          <section className='mt-2 flex text-center items-center justify-center bg-teal-100'>
+            <div className='sm:w-auto w-96 ' >
+              <h1 className='text-blue-950 bg-white shadow-lg h-28 rounded-t-3xl text-4xl mt-2 flex text-center items-center justify-between '>
                 {password}
                 <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
+                {/* <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button> */}
               </h1>
             </div>
           </section>
@@ -109,10 +110,10 @@ function App() {
 
           {/* length area start */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
+            <div className='px-2 sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
               <div className=' h-14 flex text-center items-center justify-center '>
-                <label className='mr-4 text-2xl' htmlFor="length">{length}</label>
-                <input type="range" id="Length" min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
+                <label className='mr-4 italic text-3xl text-blue-950' htmlFor="length">{length}</label>
+                <input className='w-80 ' type="range" id="Length" min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
               </div>
             </div>
           </section>
@@ -120,20 +121,29 @@ function App() {
 
           {/* checkbox start here */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='sm:w-72 w-96 bg-white shadow-lg h-18 rounded '>
-              <label htmlFor="numbers">Numbers</label>
-              <input className='ml-2' type="checkbox" id="numbers" onChange={includeNumbers} checked={numbers} />
-              <br />
-              <label htmlFor="symbols">Symbols</label>
-              <input className='ml-2' type="checkbox" id="symbols" onChange={includeSymbols} />
-              <br />
-              <label htmlFor="LowerLetters">Lower Letters</label>
-              <input className='ml-2' type="checkbox" id="LowerLetters" onChange={includeLower} />
-              <br />
-              <label htmlFor="UpperLetter">Upper Letters</label>
-              <input className='ml-2' type="checkbox" id="UpperLetter" onChange={includeUpper} />
+            <div className='font-display text-blue-950 px-2 sm:w-72 w-96 bg-white shadow-lg h-18 rounded'>
+              <div className='flex text-center items-center justify-between'>
+                <label className='text-2xl ' htmlFor="numbers">Numbers</label>
+                <input className='ml-2 h-4 w-4' type="checkbox" id="numbers" onChange={includeNumbers} checked={numbers} />
+              </div>
+
+              <div className='flex text-center items-center justify-between'>
+                <label className='text-2xl' htmlFor="symbols">Symbols</label>
+                <input className='ml-2 h-4 w-4' type="checkbox" id="symbols" onChange={includeSymbols} />
+              </div>
+
+              <div className='flex text-center items-center justify-between'>
+                <label className='text-2xl' htmlFor="LowerLetters">Lower Letters</label>
+                <input className='ml-2 h-4 w-4' type="checkbox" id="LowerLetters" onChange={includeLower} />
+              </div>
+
+              <div className='flex text-center items-center justify-between'>
+                <label className='text-2xl' htmlFor="UpperLetter">Upper Letters</label>
+                <input className='ml-2 h-4 w-4' type="checkbox" id="UpperLetter" onChange={includeUpper} />
+              </div>
             </div>
-          </section><br />
+          </section>
+          <br />
           {/* checkbox end here */}
         </div>
 
