@@ -91,7 +91,7 @@ function App() {
         <div className='bg-teal-100'>
 
           {/* text area start */}
-          <section className='pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
+          <section className='sm:text-lg sm:pr-20 sm:pl-20  pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
             <h1 className=''>Instantly generate a secure, random password with the LastPass online tool</h1>
           </section>
           {/* text area end */}
@@ -138,6 +138,7 @@ function App() {
           </section><br />
           {/* checkbox end here */}
         </div>
+
       </body>
 
     </>
