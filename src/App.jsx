@@ -103,8 +103,8 @@ function App() {
                 <label className='ml-2' htmlFor="">
                 {password}
                 </label>
-                <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
-                {/* <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button> */}
+                <Button className='ml-1 mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
+                {/* <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Refresh</Button> */}
               </h1>
             </div>
           </section>
@@ -112,10 +112,10 @@ function App() {
 
           {/* length area start */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
+            <div className='px-4 sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
               <div className=' h-14 flex text-center items-center justify-center '>
                 <label className='mr-4 italic text-3xl text-blue-950' htmlFor="length">{length}</label>
-                <input className='w-80 ' type="range" id="Length" min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
+                <input className='w-80 lp-custom-range__number ' name="length" type="range" id="Length" step="1"  min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
               </div>
             </div>
           </section>
@@ -123,7 +123,7 @@ function App() {
 
           {/* checkbox start here */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='font-display text-blue-950 px-2 sm:w-72 w-96 bg-white shadow-lg h-18 rounded'>
+            <div className='font-display text-blue-950 px-6 sm:w-72 w-96 bg-white shadow-lg h-18 rounded'>
               <div className='flex text-center items-center justify-between'>
                 <label className='text-2xl ' htmlFor="numbers">Numbers</label>
                 <input className='ml-2 h-4 w-4' type="checkbox" id="numbers" onChange={includeNumbers} checked={numbers} />
