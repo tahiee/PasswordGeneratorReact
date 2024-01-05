@@ -100,7 +100,9 @@ function App() {
           <section className='mt-2 flex text-center items-center justify-center bg-teal-100'>
             <div className='sm:w-auto w-96 ' >
               <h1 className='text-blue-950 bg-white shadow-lg h-28 rounded-t-3xl text-4xl mt-2 flex text-center items-center justify-between '>
+                <label className='ml-2' htmlFor="">
                 {password}
+                </label>
                 <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
                 {/* <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button> */}
               </h1>
@@ -110,7 +112,7 @@ function App() {
 
           {/* length area start */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='px-2 sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
+            <div className='sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
               <div className=' h-14 flex text-center items-center justify-center '>
                 <label className='mr-4 italic text-3xl text-blue-950' htmlFor="length">{length}</label>
                 <input className='w-80 ' type="range" id="Length" min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
