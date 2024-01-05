@@ -91,27 +91,25 @@ function App() {
         <div className='bg-teal-100'>
 
           {/* text area start */}
-          <section className='sm:text-lg sm:pr-20 sm:pl-20  pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
+          <section className='sm:text-lg sm:pr-20 sm:pl-20 sm:mt-3 mt-3 pr-96 pl-96 relative bg-teal-100 font-black items-center text-center text-5xl leading-normal' >
             <h1 className=''>Instantly generate a secure, random password with the LastPass online tool</h1>
           </section>
           {/* text area end */}
 
           {/* password show area start */}
           <section className='flex text-center items-center justify-center bg-teal-100'>
-            <div className='' >
-
-              <h1 className='bg-white shadow-lg h-28 rounded-t-3xl text-5xl mt-4 flex text-center items-center justify-between '>
+            <div className='sm:w-auto w-96' >
+              <h1 className='bg-white shadow-lg h-28 rounded-t-3xl text-4xl mt-4 flex text-center items-center justify-between '>
                 {password}
-                <Button className='ml-2 mr-2' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
+                <Button className='mr-1' variant="info" onClick={() => copyToClipboard()}>Copy</Button>
               </h1>
-
             </div>
           </section>
           {/* password show area end */}
 
           {/* length area start */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className=' w-96 bg-white shadow-lg h-18 rounded '>
+            <div className='sm:w-72  w-96 bg-white shadow-lg h-18 rounded '>
               <div className=' h-14 flex text-center items-center justify-center '>
                 <label className='mr-4 text-2xl' htmlFor="length">{length}</label>
                 <input type="range" id="Length" min={5} max={15} onChange={(e) => setLength(e.target.value)} value={length} />
@@ -122,7 +120,7 @@ function App() {
 
           {/* checkbox start here */}
           <section className=' flex text-center items-center justify-center  mt-2 bg-teal-100'>
-            <div className='w-96 bg-white shadow-lg h-18 rounded '>
+            <div className='sm:w-72 w-96 bg-white shadow-lg h-18 rounded '>
               <label htmlFor="numbers">Numbers</label>
               <input className='ml-2' type="checkbox" id="numbers" onChange={includeNumbers} checked={numbers} />
               <br />
